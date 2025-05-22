@@ -1,0 +1,160 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url(../images/bg-img.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.logo{
+    display: inline-block;
+    width: 200px;
+}
+.logo img{
+    width: 100%;
+}
+
+.nfxBtn{
+    background-color: rgb(229, 9, 20);
+    color: white;
+}
+
+.text-right{
+    text-align: right;
+}
+
+.backDrop{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    animation: fadeIn 0.6s ease-out;
+}
+
+.backDrop.active{
+    display: block;
+}
+
+
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.movieModal{
+    position:fixed;
+    top: 5%;
+    left: 30%;
+    width: 450px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    display: none;
+    animation: fadeIn 0.6s ease-out;
+}
+
+.movieModal.active{
+    display: block;
+}
+
+.movieModal .card{
+   background-color: transparent;
+   color: white;
+}
+
+.movieModal .card .form-control{
+   background-color: transparent;
+   color: white;
+}
+
+.movieModal .card select option{
+   background-color: rgba(0, 0, 0, 0.7);
+   color: white;
+}
+
+.modalClose {
+    cursor: pointer;
+}
+
+
+.movieCard{
+    position: relative;
+    height: 450px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+.movieCard img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.movieCard .ratingTitle{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+    animation: fadeIn 0.6s ease-in;
+}
+
+.movieCard:hover .ratingTitle{
+    display: block;
+}
+
+.movieCard .movieInfo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    animation: fadeIn 0.6s ease-in;
+}
+
+.movieCard:hover .movieInfo{
+    display: block;
+}
+
+.movieCard .action{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    display: none;
+    animation: fadeIn 0.6s ease-in;
+}
+
+.movieCard:hover .action{
+    display: block;
+    display: flex;
+}
+
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: blueviolet;
+    background-color: rgba(225, 225, 225, 0.6);
+}

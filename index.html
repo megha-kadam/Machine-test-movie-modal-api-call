@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie modal API Call</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+   <div class="container my-5">
+    <div class="row">
+        <div class="col-6">
+        <a href="index.html" class="logo">
+            <img src="./assets/images/logo.svg" alt="logo" title="logo">
+        </a>
+    </div>
+    <div class="col-6 text-right">
+        <button class="btn btn-sm nfxBtn" id="addMovie">Add Movie</button>
+    </div>
+    </div>
+   </div>
+
+
+   <div class="container-fluid">
+    <div class="row" id="movieContainer">
+        <!-- <div class="col-md-4">
+            <figure class="movieCard">
+                <img src="https://s.yimg.com/zb/imgv1/12953f41-27cb-3784-9fdc-425f340d18af/t_500x300" alt="Chava" title="Chava">
+
+                <figcaption>
+                    <div class="ratingTitle">
+                        <div class="row">
+                            <div class="col-10">
+                                <h3>Chava</h3>
+                            </div>
+                            <div class="col-2">
+                                <small class="p-2 bg-warning">5</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="movieInfo">
+                        <h3>Chava</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni nulla exercitationem consectetur excepturi inventore, ad ipsa, aliquam laboriosam blanditiis reiciendis earum praesentium libero neque eveniet, id voluptas illum nisi aliquid.</p>
+                    </div>
+                    <div class="action">
+                        <button class="btn-sm btn btn-outline-info">Edit</button>
+                        <button class="btn-sm btn btn-outline-danger">Remove</button>
+                    </div>
+                </figcaption>
+            </figure>
+        </div> -->
+    </div>
+   </div>
+
+
+   <div class="backDrop modalClose" id="backDrop"></div>
+   <div class="movieModal" id="movieModal">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between">
+                <h3>Movie Details</h3>
+                <i class="fa-solid fa-xmark fa-2x modalClose"></i> 
+            </div>
+            <div class="card-body">
+                 <form id="movieForm">
+                    <div class="form-group">
+                        <label for="movieTitle">Movie Title</label>
+                        <input type="text" required class="form-control mb-2" id="movieTitle">
+                    </div>
+                     <div class="form-group">
+                        <label for="movieImgURL">Movie Image URL</label>
+                        <input type="text" required class="form-control mb-2" id="movieImgURL">
+                    </div>
+                     <div class="form-group">
+                        <label for="movieDescription">Movie Description</label>
+                        <textarea required class="form-control mb-2" id="movieDescription"></textarea>
+                    </div>
+                     <div class="form-group">
+                        <label for="movieRating">Movie Rating</label>
+                        <select required class="form-control mb-2" id="movieRating">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4"></option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                
+            </div>
+           <div class="card-footer">
+                <button class="btn-sm btn nfxBtn" type="submit" id="addMovieBtn">Add Movie</button>
+                <button class="btn-sm btn nfxBtn d-none" type="button" id="updateMovieBtn">Add Movie</button>
+                <button class="btn-sm btn nfxBtn modalClose">Close</button>
+           </div>
+           </form>
+        </div>
+   </div>
+
+   <div class="loader d-none" id="loader">
+        <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+            <span class="visually-hidden"></span>
+        </div>
+   </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+     <script src = "./assets/js/app.js"></script>
+</body>
+</html>
